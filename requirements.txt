@@ -1,0 +1,12 @@
+# Machine learning and deep learning frameworks
+tensorflow==2.16.1
+keras==2.16.0
+
+# Numerical operations
+numpy==1.26.4
+
+# Data visualization
+matplotlib==3.8.4
+
+# Machine learning
+scikit-learn==1.4.2
