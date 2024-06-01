@@ -3,7 +3,7 @@ import sys
 import subprocess
 
 # Define the required Python version
-REQUIRED_PYTHON_VERSION = (3, 9, 19)
+REQUIRED_PYTHON_VERSION = (3, 9, 13)
 REQUIREMENTS_FILE = 'requirements.txt'
 
 def get_python_version():
