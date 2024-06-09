@@ -26,7 +26,7 @@ Finally, the model is used to predict the Open Unemployment Rate for the years 2
 ## Prerequisites
 
 ### Python Version
-Ensure you have Python version `3.9.19` installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
+Ensure you have Python version `3.9.13` installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
 
 To manage python version you can use [pyenv](https://github.com/pyenv/pyenv) if you're on Linux or [pyenv-win](https://github.com/pyenv-win/pyenv-win) if you're on Windows.
 
