@@ -97,6 +97,8 @@ jupyter notebook
 
 ## How It Works and It's Expected Results 
 Here you can learn how the project works and see the expected result. What happens in this notebook is largely could be split into two parts. which is the Training Stage and the Prediction Stage. The training stage consist of preparing, normalizing, and training the model with the prepared data (TPT values from the year 1988-2021) (also note that the data point for the year 1995 is interpolated, refer to 1995_year_data_point_interpolation for the process) and the prediction stage consist of utilizing the model to predict known data (TPT values from the year 2022-2023) for it's performance to be measured
+
+Note : Please be aware that results can vary by approx 0.3%-0.5% for every execution so treat these results as a reference point only and not an absolute.
 ### A. Training Stage
 - The script starts by importing necessary libraries such as numpy, keras, matplotlib, etc.
 - It then defines the path to the data file and checks if the data file exists at the specified path.
