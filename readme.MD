@@ -11,6 +11,7 @@
     - [Setting Up Virtual Environment](#setting-up-virtual-environment)
     - [Installing Dependencies](#installing-dependencies)
   - [Usage](#usage)
+  - [How It Works and It's Expected Results](#how-it-works-and-its-expected-results)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -93,6 +94,41 @@ To use the vanilla Jupyter Notebook for this project all you need to do is to ru
 ```
 jupyter notebook
 ```
+
+## How It Works and It's Expected Results 
+Here you can learn how the project works and see the expected result. What happens in this notebook is largely could be split into two parts. which is the Training Stage and the Prediction Stage. The training stage consist of preparing, normalizing, and training the model with the prepared data (TPT values from the year 1987-2021) and the prediction stage consist of utilizing the model to predict known data (TPT values from the year 2022-2023) for it's performance to be measured
+### A. Training Stage
+- The script starts by importing necessary libraries such as numpy, keras, matplotlib, etc.
+- It then defines the path to the data file and checks if the data file exists at the specified path.
+- A normalization function is defined to normalize the data.
+The data is loaded from the file and normalized.
+The data is then split into input (X) and output (Y) for training.
+- A Sequential model is defined using Keras with three hidden layers each having 16 neurons and 'relu' activation function. The output layer has 1 neuron with 'sigmoid' activation function.
+- The model is compiled with 'mean_squared_error' as the loss function and 'adam' as the optimizer.
+- A custom callback is defined to plot the losses after each epoch.
+- The model is trained on the data for 500 epochs. This is the result graph of the model training : ![training-plot-graph](images/training-plot-graph.png)
+- The model's predictions on the training data are obtained and denormalized.
+- The predictions are plotted against the actual values and the error is also plotted. Here are the results of it's error plot![training-error-graph](images/training-error-graph.png) ![training-output-comparison](images/training-output-comparison.png)
+- Performance metrics such as MSE, RMSE, and MAPE are calculated and printed in which you will get these values
+```
+mse = 6.548361864962357e-15
+rmse = 8.092194921628097e-08
+MAPE = 2.991363433963946
+Persentase_keberhasilan = 97.00863656603606
+```
+
+### B. Prediction Stage
+1. The model is used to predict the output for new input data (the TPT value for year 2022-2023)
+2. The predictions are denormalized.
+3. The predictions are plotted against the actual values and the error is also plotted.![prediction-output-comparison](images/prediction-output-comparison.png)![prediction-error-comparison](images/prediction-error-graph.png)
+4. Performance metrics such as MSE, RMSE, and MAPE are calculated and printed for the predictions in which you'll get these values
+```
+mse = 0.6381351969398824
+rmse = 0.7988336478515927
+MAPE = 13.642235368263764
+Persentase_keberhasilan = 86.35776463173623
+```
+
 ## Contributing
 You can freely fork this repository and create a pull request. If you have any problems regarding this project you can contact me thru my email.
 
