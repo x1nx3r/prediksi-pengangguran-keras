@@ -96,7 +96,7 @@ jupyter notebook
 ```
 
 ## How It Works and It's Expected Results 
-Here you can learn how the project works and see the expected result. What happens in this notebook is largely could be split into two parts. which is the Training Stage and the Prediction Stage. The training stage consist of preparing, normalizing, and training the model with the prepared data (TPT values from the year 1987-2021) and the prediction stage consist of utilizing the model to predict known data (TPT values from the year 2022-2023) for it's performance to be measured
+Here you can learn how the project works and see the expected result. What happens in this notebook is largely could be split into two parts. which is the Training Stage and the Prediction Stage. The training stage consist of preparing, normalizing, and training the model with the prepared data (TPT values from the year 1988-2021) (also note that the data point for the year 1995 is interpolated, refer to 1995_year_data_point_interpolation for the process) and the prediction stage consist of utilizing the model to predict known data (TPT values from the year 2022-2023) for it's performance to be measured
 ### A. Training Stage
 - The script starts by importing necessary libraries such as numpy, keras, matplotlib, etc.
 - It then defines the path to the data file and checks if the data file exists at the specified path.
@@ -123,10 +123,10 @@ Persentase_keberhasilan = 97.00863656603606
 3. The predictions are plotted against the actual values and the error is also plotted.![prediction-output-comparison](images/prediction-output-comparison.png)![prediction-error-comparison](images/prediction-error-graph.png)
 4. Performance metrics such as MSE, RMSE, and MAPE are calculated and printed for the predictions in which you'll get these values
 ```
-mse = 0.6381351969398824
-rmse = 0.7988336478515927
-MAPE = 13.642235368263764
-Persentase_keberhasilan = 86.35776463173623
+mse = 0.4706115752918306
+rmse = 0.6860113521595912
+MAPE = 11.725411817619984
+Persentase_keberhasilan = 88.27458818238001
 ```
 
 ## Contributing
